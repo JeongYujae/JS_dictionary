@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var 선언자
+        var x=5;
+        var y=6;
+        var z= x+y; //11저장
+        console.log("z:",z)
+
+        var x=7; //변수 재선언(덮어쓰기)
+        z=x+y; //이미 서언된 변수에 새로운 값 할당 
+
+        console.log(x,z)
+        //let
+        let x1=5; //변수에 저장
+        let y1=6;
+        let z1=x1+y1;
+
+        let x=7; //Already declared -> 변수 명이 겹칠 수 없음
+        x1=7 //이건 가능
+        //const 상수. 한번 선언한 값을 절대 바꿀 수 없어
+
+        const PI=3.14;
+        // const PI=1.12;
+        // PI=2.12; 바꿀 수가 없어
+
+    </script>
+</body>
+</html>
