@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>ㄴ
+<body>
+    <script>
+        //if 조건문
+
+    var age=22
+    if(age>20) {
+        console.log('if 조건문');
+    }else if(age>25){
+        console.log('최소 20대 중반 출력됨')
+    }
+
+        // switch 조건문
+        var d= new Date();
+        var day= d.getDay();
+        var dayName= '';
+
+        switch (day) {
+            case 0:
+                dayName='일'
+                break;  
+            case 1:
+                dayName='월'
+                break;  
+            
+            case 2:
+                dayName='화'
+                break;
+
+            default:
+                dayName='찾지 못했음';
+                break;
+        }
+
+        console.log(dayName)
+
+        //조건문 안 key -> 비교식 X, 상수(문자, 숫자) 만 옴 -> 상수를 기준으로 조건문을 계산할떄는 switch 를 써주자
+
+
+    </script>
+</body>
+</html>
