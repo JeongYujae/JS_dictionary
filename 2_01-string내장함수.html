@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //String 내장 함수
+
+        //-length
+        var text='abdcdrgfgwetety'
+        console.log(text.length);
+
+        //indexOf -> 이 단어가 시작되는 index 값 출력 대부분 문자열안에 있는지 없는지를 >-1 로 해서 찾을떄 가능
+        var str="Location of the apple"
+        console.log(str.indexOf("apple"))
+
+        //lastIndexOf 는마지막 인덱스 번호
+
+        //search
+        console.log(str.search('apple'))
+
+        //slice range범위처럼 시작점 포함 o, 마지막값 포함 x
+
+        var str="adjust,confirm,gather"
+        console.log(str.slice(4,9))
+
+        //substring slice랑 똑같음
+
+        console.log(str.substring(4,9))
+
+        //substr (시작점, 시작점부터 가져올 인덱스의 번호수)
+        
+        console.log(str.substring(4,5))
+
+        var security_number='010630'
+        console.log(security_number.substr(0,2));
+        console.log(security_number.substr(2,2));
+
+        //replace -> 첫번째 단어만 바뀐다. 중복되는 같은 단어는 replace가 되지 않음 -> 정규표현식으로 해결 가능 g는 글로벌, gi는 대소문자 구분 x
+        var a='Please visit our web'
+        var b=a.replace('web','web site');
+        console.log(b)
+
+        var a='please call call call call'
+        var b=a.replace(/call/g, "run")
+
+        //UpperCase 대문자로 바꾸기 <-> LowerCase 소문자로 바꾸기
+
+        //concat 
+        var t1='hi';
+        var t2='sup'
+        var t3=t1.concat(t2)
+        console.log(t3)
+
+        //trim 좌우 공백 제거
+        var t='                   bonjour          ';
+        console.log(t.trim());
+
+        //padStart (x,y) x글자를 만들고 그 앞을 y로 채운다 <-> padEnd 는 뒤로 채운다
+
+        var a='5';
+        console.log(a.padStart(4,0));
+        
+        //charAt ()안의 인자 가져올 것 index 번호 찾는 느낌(파이썬 인덱싱)
+        var t='bonjour ca va'
+        console.log(str.charAt(1))
+
+        //split
+        var tags= '키보드,기계식,블루투스,적축';
+        var tags_splitted=tags.split(',')
+        console.log(tags)
+    </script>
+</body>
+</html>
