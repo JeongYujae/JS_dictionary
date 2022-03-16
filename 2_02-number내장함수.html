@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //number
+
+        //toString ()안 진수로 문자열로 바꾸기
+
+        //toFixed () 안 지정된 소수점 자리수까지 반올림으로 표기
+        var x=9.563671;
+        console.log(x.toFixed(2))
+
+        //toPrecision() ()안 자리수만큼 정수값도 포함해서 반올림으로 표기
+        var x=9.565;
+        console.log(x.toPrecision(2));
+        
+        //Number('10') int 형으로 만들어주는거
+
+        //parseInt() 정수값만 return 해줌 -> 소수점 밑으로는 버려짐/ 문자열 -숫자 같이 있어도 숫자만 골라서 바꿔줌, 숫자 끼리 오면 맨 앞꺼
+        console.log(parseInt('3.14'))
+
+        //parseFloat() float 값으로 다 바꿔줌 
+        console.log(parseFloat('10.24682'));
+    </script>
+</body>
+</html>

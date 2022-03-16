@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x= true; //타입: boolean
+        var y= new Boolean(true); //타입: object
+
+        var s= 'abc' //타입: string
+        var q= new String('abc') //타입: object
+
+        console.log(Boolean(10>9)); 
+        //-> object 타입
+
+        var x;
+        console.log(Boolean(x));
+        // ->undefined로 나오지 않고 false 값으로 나온다. Boolean 상에서는 0 or 1 만 존재하니까
+    </script>
+</body>
+</html>
