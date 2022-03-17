@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <script>
+
+
+        var a = new Date(); //현재 날짜 시간 출력
+
+        var b = new Date(2022,2,17,21,25,21);
+
+        var year= a.getFullYear();
+        var month=a.getMonth();
+
+        var day=a.getDate();
+
+        //hour, minute, second 다 적용 가능
+
+        //month는 0부터 시작
+        //day는 1부터 시작
+
+
+        //타임존 가져오기 함수
+
+        console.log(a.getTimezoneOffset()); //분 단위
+
+        //어차피 라이브러리 쓸거임 moment.js, moment.js cdn 들어가면 링크 복붙 가능
+
+        //moment 이용하기
+        
+        var x= moment().format('YYYY-MM-DD')
+        console.log(x)
+
+        console.log(moment().subtract(7, "days").format("YYYY-MM-DD"));
+        console.log(moment().add(7, "days").format("YYYY-MM-DD"));
+        console.log(moment().add(4, "hours").format("YYYY-MM-DD"));
+        
+
+    </script>
+</body>
+</html>

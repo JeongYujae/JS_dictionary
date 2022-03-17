@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //round(숫자) 반올림
+
+        //ceil() 올림 -> 하단 페이지 번호 때 사용 ex) 72건 중 페이지 번호는 8까지니까
+        console.log(Math.ceil(72/10));
+
+        //floor() -> ceil 무조건 내림 버전 -4.2 ->-5
+
+        //trunc() 정수부분만 리턴 
+        console.log(Math.trunc(9.9)); // -> 9
+        console.log(Math.trunc(-4.2)); // -> -4
+
+        //sign() 음수면 -1, 양수면 1, 0이면 0
+
+        //pow() 제곱
+        console.log(Math.pow(8,2)); 8^2
+
+        //sqrt() 루트
+
+        //abs() 절대값
+
+        //max(), min() () 안에 수를 넣어야됨
+
+        //random()
+        var x= Math.floor(Math.random()*10+1); //default는 0~1 사이 숫자
+        console.log(x);
+
+        function getInt(min,max){
+            return Math.floor(Math.random()*(max-min+1))+min;
+        }
+        console.log(getInt(1,10))
+    </script>
+</body>
+</html>
