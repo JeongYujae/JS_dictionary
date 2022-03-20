@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button type="button">제출</button>
+    <script>
+        //console.log(window); 윈도우 객체 존재
+        
+        //1. alert (팝업 창)
+
+        // window.alert('Alert창입니다')
+
+        //2. confirm
+
+        // var a= window.confirm('정말 삭제할까요?');
+        //콘솔에 찍어서 true, false로 찍힘 -> 각각에 따른 명령어 실행 가능
+
+        //3. prompt
+
+        // a= prompt('input your password')
+        // console.log(a)
+        // if (a==null){
+            
+        // }else if(txt='1234'){
+        //     console.log(a)
+        // }else{
+            
+        // }
+
+        //4. open 창 이동
+
+        // window.open("http://naver.com")
+
+        //5. print -> window.print() 바로 인쇄창으로 연결
+
+        //6. setTimeout 요구된 명령 한번 수행하고 끝
+
+        // setTimeout(function(){
+        //     console.log('1초후 프로그램 실행')
+        // }, 1000); // 1초 -> 1000
+
+        //7. setInterval() -> 초 마다 실행 
+
+        //8. clearInterval
+        
+        var i=0;
+        var fnc=setInterval(function(){
+            console.log('3초마다 프로그램 실행중-'+i);
+            if (i==3){
+                clearInterval(fnc);
+                console.log('3이 나와서 프로그램 종료');
+            }
+            i++;
+        }, 3000)
+
+        //
+    </script>
+</body>
+</html>

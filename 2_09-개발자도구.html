@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //console에 찍는 법
+        console.log('여기는 콘솔 로그로 찍은거');
+        console.info('info');
+        console.warn('warn');
+        console.error('error');
+
+        //table 
+        var userlist=[
+            {firstname: '유재', lastname: '정', age:22},
+            {firstname: '지은', lastname:'백', age:22},
+            {firstname: '룰ㄹ루',lastname:'랄ㄹ라', age: 30}
+    ]
+        console.table(userlist);
+
+        //time, timeEnd 
+
+        function a(){
+            console.time();
+
+            if (firstname='룰ㄹ루'){
+                console.log('룰ㄹ루 sellected')
+                
+            }
+            console.timeEnd();
+        }
+
+        //css도 가능함 잘 안씀
+        console.log('this is %cstyle message', 'color:red;background:black;padding:3px')
+    </script>
+</body>
+</html>

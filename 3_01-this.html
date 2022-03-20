@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="this.style.backgroundColor='red'">클릭</button>
+    
+    <button type="button" onclick="callFunc(this)">클릭2</button>
+
+    <select onchange="changeSelect(this)">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+
+    </select>
+
+    <script>
+        //this 만 치면 window가 출력됨, function 안에서도 this 를 쳐도 global 변수인 window가 나온다
+        console.log(this);
+
+        //function -> object 안에서의 this 는 object 자체
+
+        var person={
+            first:'andy',
+            last:'jackson',
+            fullname: function() {
+                return this.first +' ' + this.last;
+            }
+        };
+        console.log(person.fullname()) //함수니까 () 붙여준거
+
+
+        //버튼클릭하면 log에 button 태그 전부 그 자체가 찍힘
+        function callFunc(a){
+            console.log(a)
+        }
+
+        function changeSelect(b){
+            console.log(b.value)
+        }
+    </script>
+</body>
+</html>
