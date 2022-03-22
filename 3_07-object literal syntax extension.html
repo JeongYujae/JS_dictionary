@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object literal syntax extension -> object의 key를 동적으로 기능하게 해주는 기능
+
+        var firstname='jerry';
+        var lastname= 'morris';
+
+        var person = {
+            first: firstname,
+            last: lastname
+        }
+
+        var a = 'goal'
+
+        var point={
+            [a]: 5,
+            assist: 12
+        };
+
+        console.log(point.goal)
+
+        //object에 새로운 정보 동적으로 추가하기 [] 를 사용하자
+        var b='age';
+
+        point[b] = 30;
+
+        console.log(point)
+    </script>
+</body>
+</html>

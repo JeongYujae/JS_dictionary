@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //모두 같은 코드
+        function hi(){
+            return'Welcome User..';
+            
+        }
+
+        var hi2= function(){
+            return'Welcome User..';
+        }
+
+        var hi3= () => {
+            return'Welcome User..';
+        }
+
+        var hi4= () => 'welcome user..';
+
+        //인자도 넣을 수 있음
+
+        var merger = (first,last) => first + last;
+
+        console.log(merger('a','bbbbbbb'))
+
+        //인자가 하나면 ()도 생략 가능
+
+    </script>
+</body>
+</html>

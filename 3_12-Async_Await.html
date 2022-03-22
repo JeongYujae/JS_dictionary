@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //Promise 와 같은 기능이지만 더 간결한 기능
+
+        var url='';
+        var data= axios.get('/user?ID=12345').then(function (response) {
+            console.log(response);
+            return response.data;
+        });
+
+        function getdata(){
+            //promise -> resolve 는 성공하면, reject는 성공 못하면/ new Promise(resolve, reject)가 디폴트값임
+
+            return new Promise(function(resolve, reject){
+                axios.get(url).then(function(response){
+                    console.log(response.data);
+                    return response.data;
+                });
+            });
+
+        }
+        
+        async function getdata2(){
+            return (await axios.get(url)).data;
+        }
+
+
+        async function calculatesum(){
+
+            var data= await getdata2();
+            
+            var total=0;
+            
+            for (var item of data){
+                total+=itme.price;
+            }
+
+            console.log(total);
+        }
+
+        calculatesum();
+
+
+        
+    </script>
+</body>
+</html>l

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체를 생성하기 위한 틀, class -> 파이썬과 유사 self 가 this
+
+        class Car{
+            constructor(name,year,type,price){
+                this.name=name;
+                this.year=year;
+                this.type=type;
+                this.price=price;
+            }
+            
+            get_name(){
+                return this.name;
+            }
+
+            get_year(){
+                return this.year
+            }
+
+            get_price(){
+                return this.price;
+            }
+            set_price(price){
+                this.price=price;
+            }
+            
+            
+        }
+
+        let a= new Car('ionic','2021','e',4000);
+
+        console.log(a.get_name(),a.get_year());
+        a. set_price(4100);
+        console.log(a.get_price())
+
+        //상속 super로 car의 constructor this.~~ 과정 생략 가능
+        class Elec_car extends Car{
+            constructor(name,year,price){
+                super(name,year,'e',price);
+            }
+
+            set_charge(time){
+                this.chargetime=time;
+            }
+            
+            get_charge(){
+                return this.chargetime;
+            }
+        }
+
+        let elec_car1= new Elec_car('ionic5','2022',5000);
+        elec_car1.set_charge(50);
+        console.log(elec_car1.get_price(), elec_car1.get_charge())
+        
+
+    </script>
+</body>
+</html>

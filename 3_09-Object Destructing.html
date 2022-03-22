@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object destructing
+
+        function person(){
+            return{
+                first:'john',
+                last:'doe',
+                age:30,
+                email: 'j@naver.com',
+                city: 'LA'
+            };
+        }
+
+        var {last, age}= person();
+        console.log(last);
+        console.log(age);
+
+        // -> {}을 사용하지 않으면 person.last, 이런 식으로 써야함
+    </script>
+</body>
+</html>

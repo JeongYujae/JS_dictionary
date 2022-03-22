@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //Promise 서버 호출해서 데이터를 받을 때까지 밑의 코드를 실행하지 않게 약속해주는 코드
+
+        //mock server -> 가짜 서버 만들 수 있음 -> 체크 가능
+
+        var url='';
+        var data= axios.get('/user?ID=12345').then(function (response) {
+            console.log(response);
+            return response.data;
+        });
+
+        function getdata(){
+            //promise -> resolve 는 성공하면, reject는 성공 못하면/ new Promise(resolve, reject)가 디폴트값임
+
+            return new Promise(function(resolve, reject){
+                axios.get(url).then(function(response){
+                    console.log(response.data);
+                    return response.data;
+                });
+            });
+
+        }
+        
+        var total=0;
+        getdata().then(function(data){
+            for (var item of data){
+                total+=itme.price;
+            }
+        })
+
+        console.log(total);
+    </script>
+</body>
+</html>l
