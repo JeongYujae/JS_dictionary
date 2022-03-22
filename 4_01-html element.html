@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    Text:
+    <input type="text" id="text1" value="ABC">
+    <br>
+    Interest:
+    <br>
+    <!-- chcekbox는 같은 name으로 묶어줘야함 -->
+    <label>
+        <input type="checkbox" name="chk_interest" value="sports">스포츠</label>
+    </label>
+    <label>
+        <input type="checkbox" name="chk_interest" value="music">음악</label>
+
+    </label>
+    <label>
+        <input type="checkbox" name="chk_interest" value="travel">여행</label>
+
+    </label>
+    <label>
+        <input type="checkbox" name="chk_interest" value="cooking">요리</label>
+
+    </label>
+    <br>
+    Radio:
+    <label>
+        <input type="radio" name="radio_email_yn" value="Y" checked> Agree
+    </label>
+    <label>
+        <input type="radio" name="radio_email_yn" value="N"> Disagree
+    </label>
+    <br>
+    Select:
+    <select id="select1">
+        <option value="KO">ROK</option>
+        <option value="US">USA</option>
+        <option value="JP">JPN</option>
+
+    </select>
+    <!-- 자바스크립트는 html과 소통하기 위함이다, 각 element에 접근하는게 최우선-->
+    <!-- 접근 후에는 객체에 해당하는 value값을 서버에 전송할 수 있다 -->
+    <br>
+    <button type="button" onclick="doSave();">Save</button>
+
+    <div id="lorem">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eligendi nostrum doloribus velit amet adipisci tenetur exercitationem dignissimos dolor corrupti?
+    </div>
+
+    <script>
+        //값 수정하기
+        document.getElementById('text1').value = 'abcdefu';
+
+        function doSave(){
+            var txt1=document.getElementById('text1')
+            txt1_value=txt1.value
+            console.log(txt1);
+
+            // var txt2=document.querySelector('#text1')
+            // console.log(txt2);
+
+            var chb=document.getElementsByName('chk_interest');
+            for (var i=0; i<chb.length ; i++){
+                if (chb[i].checked){
+                    console.log(chb[i].value)
+                }
+
+            }
+
+            // querySelectorAll -> 배열 형태
+            var chb_2=document.querySelectorAll('[name=chk_interest]:checked');
+            console.log(chb_2);
+            
+            // querySelector -> 하나만 뽑아옴
+            var radio=document.querySelector('[name=radio_email_yn]:checked');
+            console.log(radio.value)
+
+            
+            var sel=document.getElementById('select1');
+
+            console.log(sel.value);
+
+            //innerText 는 text, innerHTML 은 html 코드를 다 가져옴
+            var txt3=document.getElementById('lorem');
+            console.log(txt3.innerText)
+            
+            //html 자체를 통으로 다 가져옴
+            console.log(document.getElementsByTagName('div'));
+            
+        }
+    </script>
+
+
+
+</body>
+</html>

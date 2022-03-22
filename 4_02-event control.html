@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    focus:
+    blur:
+    <br>
+    <!-- onfocus -> 마우스 올려두면 반응 -->
+    <!-- onblur -> 포커스 들어왔다가 빠져 나갈 때 반응 -->
+    <input type="text" id="text1" onfocus="doFocus();" onblur="doBlur(this);" >
+    <br> select:
+    <br>
+    <!-- onchange -> 바뀌면 반응 -->
+    <select id="select1" onchange="doChange();">
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+    <br>
+    keydown:
+    <br>
+    <!-- onkeydown: 키 눌렸을 때 -->
+    <input type="text" id="text2" onkeydown="doKeydown(event);">
+    <button type="button" onclick="doSearch();">조회</button>
+    <!-- onclick -> 클릭하면 일어남 -->
+    <br>
+	<button onclick="doSave();">Click</button>
+	<br>
+    <script>
+        function doFocus(){
+            console.log("doFocus");
+        }
+
+        function doBlur(obj) {
+            if(obj.value == "") {
+                alert("필수값입니다. 반드시 입력하세요.");
+            }
+            console.log(obj.value);
+        }
+
+        function doSearch(){
+            console.log("조회를 시작합니다.");
+        }
+
+        function doChange(){
+            var selectedValue = document.getElementById("select1").value;
+            console.log(selectedValue);
+        }
+
+        //keyocde 13 : enter키
+        function doKeydown(event){
+            if(event.keyCode == 13) {
+                doSearch();
+            }
+            // console.log(event);
+        }
+
+        function doSave() {
+            console.log("doSave");
+        }
+    </script>
+</body>
+
+</html>

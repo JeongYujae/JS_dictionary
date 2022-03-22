@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            console.log('log message');
+        } catch(err){
+            console.error(err.name);
+            console.log(err.message);
+        }
+
+        //throw는 강제로 catch로 보내버리는거임
+        //finally -> 에러 유무에 상관 없이 무조건 실행시키는 코드
+        var x=3
+        try{
+            if (x=='') throw 'empty';
+
+            var y=x+3
+            console.log(y, 'if문에 안걸러진 문장')
+        } catch(err){
+            console.log(` is ${err}`);
+        } finally{
+            console.log('try catch문 에러 유무 관계 없이 무조건 실행시켜주는 코드 finally')
+        }
+        //%{} 사용하려면 ` 사용하기
+    </script>
+</body>
+</html>
