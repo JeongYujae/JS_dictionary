@@ -1,5 +1,3 @@
 # JAVASCRIPT DICTIONARY
 
-### Making my own dictionary to use JS effeciently.
-
-### Starting from the bottom
+Own JS dictionary. Just for studying and being familiar to JS
